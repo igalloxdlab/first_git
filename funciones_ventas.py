@@ -3,7 +3,7 @@ from collections import defaultdict
 
 def leer_archivo(filename):
     ventas = []
-    with open(filename, 'r') as file:
+    with open(filename, 'r', encoding='utf-8', newline='') as file:
         reader = csv.DictReader(file)
         for row in reader:
             ventas.append({
